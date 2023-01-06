@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import price
 from django.http import HttpResponse
 from .form import order_detailModelForm
-# Create your views here.
+
 def index(request):
     return render(request, "index.html")
 
