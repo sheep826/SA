@@ -1,0 +1,102 @@
+html{
+    overflow-x: hidden;
+}
+body{
+    overflow: hidden;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background-color: #c4daf1;
+}
+.top{
+    height: 6%;
+    width: 100%;
+    margin: 0;
+    padding: 7% 0 7% 0;
+    background-color: #77bde6;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.title_text{
+    font-size:x-large;
+    margin: 0;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    
+}
+
+.welcome_text{
+    font-size: xx-large;
+    margin-top: 20%;
+}
+
+.welcome{
+    justify-content: center; 
+    align-items: center; 
+    margin: 0 ;
+    padding: 5px;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.input_frame{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: 0 ;
+    padding: 5px;
+    margin-top: 5%;
+}
+
+.inputphone {
+    padding: 3px;
+    padding-left: 6px;
+    margin: 0 ;
+    height: 40px;
+    width: 60%;
+    border-radius: 10px;
+    border: none;
+}
+.sendphone {
+    padding: 3px;
+    margin: 0 ;
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+    border: none;
+}
+.input_frame .inputa{
+    justify-content:center;
+    align-items:center;
+    padding: 3px;
+    padding-left: 6px;
+    margin: 0 ;
+    height: 40px;
+    width: 80%;
+    border-radius: 10px;
+    border: none;
+}
+.signup{
+
+    justify-content:center;
+    align-items:center;
+    width: 90%;
+
+    padding: 10px;
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+    background-color: #77bde6;
+    border-radius: 10px;
+    text-align: center;
+    font-size: larger;
+    margin: 0 15%;
+
+}
+.signup_right{
+    margin-left: -5% ;
+}
+.signup_frame{
+    width: 30%;
+    margin-top: 10%;
+}

@@ -1,0 +1,104 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.title.fs-4{
+    background-color: #77bde6;
+    height: 10vh;
+    letter-spacing: 3px;
+    text-align: center;
+    color:#ffffff;
+    font-weight: bold;
+}
+.box1{
+    background: #e2f5fd;
+    height: 15vh;
+}
+.fs-4{
+    font-size: 18px;
+    text-align: center;
+}
+.progress {
+    --bs-progress-height: 1.7rem;
+    --bs-progress-bg: #c4daf1;
+    --bs-progress-border-radius: 0.5rem;
+    --bs-progress-bar-bg: #508be4;
+    display: flex;
+}
+.box2{
+    background: #e2f5fd;
+    height: 60vh;
+}
+.box2-2{
+    background-color: #ffffff;
+    max-height: 80%;
+    min-height: 30%;
+    overflow: auto;
+    border-radius: 20px;
+    box-shadow: 10px 10px 25px #757474;
+    display: flex;
+    align-items: center
+}
+.fs-3{
+    color: #9d9d9d;
+}
+.fs-5{
+    color: #000;
+}
+.text2-3-2{
+    font-size: 20px;
+    color: #000;
+}
+/*bottom*/
+.box3{
+    background: #77bde6;
+    height: 15vh;
+}
+.box3.fs-5{
+    text-align: center;
+    padding: 5%;
+}
+.button1{
+    background-color: #78a7ec;
+    font-weight: bolder;
+    width: 300px;
+    height: 300px;
+    border-radius: 12px;
+    padding: 14px 40px;
+    transition-duration: 0.4s;
+}
+.button2{
+    color: #ffffff;
+}
+.button2:hover {
+    background-color: #ffffff;
+    color: #78a7ec;
+}
+
+.modal-content {
+    display: block;;
+}
+
+.modal-header {
+    display: block;
+    text-align: center;
+}
+
+.modal-content {
+    align-items: center
+}
+.modal-title {
+    margin: 10px 10px 0px 10px;
+}
+
+.modal-body {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-body .fs-5 {
+    margin: 10px;
+}

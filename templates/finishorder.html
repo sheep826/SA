@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>訂單已送出</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/finishorder.css' %}">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row title fs-4 align-items-center justify-content-start">
+            <div class="col-2"><img src="{% static 'images/people.png' %}" width="50px" height="50px"></div>
+            <div class="col-8"><a href="/" style="text-decoration: none; color: #ffffff;">AI智慧喜</a></div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row box1 fs-4 align-items-center">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="30" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+            </div>
+            <div class="col-4">洗衣模式</div>
+            <div class="col-4">運送模式</div>
+            <div class="col-4">確認訂單</div>
+        </div>
+    </div>
+    <!-- <form action="/wash/wash2/" method="POST"> -->
+        <div class="container-fluid">
+            <div class="row box2 align-items-center justify-content-center">
+                <div class="col-10 box2-2">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="exampleModalToggleLabel2">確認完成通知</h3>
+                        </div>
+                        <hr style="width: 90%; text-align: center; margin: 10px;">
+                        <div class="modal-body">
+                            <img src="{% static 'images/check.png' %}" width="30px" height="30px">
+                            <div class="fs-5">訂單已送出！</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row box3 fs-5 align-items-center" style="display: flex; justify-content: center;">
+                <form action="/wash/order_detail/" method="POST">
+                    {% csrf_token %}
+                    <input type="hidden" name="ordid" value="{{id}}">
+                <!-- <div class="col-6"> -->
+                    <button type="submit" style="border: none;"><a class="button1 button2"
+                        style="text-decoration: none;">完成</a></button>
+                    <!-- </div> -->
+                </form>
+            </div>
+        </div>
+</body>
+</html>

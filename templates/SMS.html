@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMS</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/SMS.css' %}">
+</head>
+<body>
+    <div class="top">
+        <p class="title_text">簡訊驗證</p>
+    </div>
+    
+    <form action="/SMScode/" method="POST">
+        {% csrf_token %} 
+        <div class="input_frame">
+            <input class="inputa" type="text" name="userphone" style="outline: none;color: gray;" readonly='readonly' value="{{ userphone }}">
+        </div>
+        <div class="input_frame">
+            <input class="inputa" type="text" name="code" autocomplete="off" placeholder="請輸入驗證碼" value="">
+        </div>
+        <input type="hidden" name="SMSID" value="{{ RSMSID }}">
+        <div class="input_frame">
+            <input type="submit" class="submit" value="送出">
+        </div>
+    </form>
+    
+</body>
+</html>

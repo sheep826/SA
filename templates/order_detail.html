@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>order_detail</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'css/order_detail.css' %}">
+</head>
+<body>
+    {% include 'nav.html' %}
+
+    <div class="container-fluid">
+        <div class="row box2  justify-content-center">
+            <div class="col-10 box2-1">
+                <form action="/wash/finish/" method="post">
+                    {% csrf_token %} 
+                    <div class="fs-4">
+                        {% for ord in ords %}
+                        <b>訂單編號：<span class="fs-4"></span><input readonly name="ORDID" value="{{ord.orderId}}"></b><br>
+                        成立時間：<span class="fs-4"></span><input readonly name="CDATE" value="{{ord.oOrdertime}}"><br>
+                        完成時間：<span class="fs-4">{{ finishorder }}</span><br>
+                        {% endfor %}
+                        {% for ordt in ordts %}
+                        預計完成時間：<span class="fs-4">{{ordt.finaltime}}</span><br>
+                        目前狀態：<span class="fs-4">作業中</span><br>
+                        送洗桶數：<span class="fs-4">{{ordt.wash_num}}桶</span><br>
+                        付款狀態：<span class="fs-4">
+                            {% if pay %}
+                            已付款
+                            {% else %}
+                            <button type="submit" style="margin: 0;" class="finish">前往付款</button>
+                            {% endif %}
+                        </span><br>
+                        付款方式：<span class="fs-4">信用卡</span><br>
+                        付款金額：<span class="fs-4"></span><input type="text" readonly style="width: 20%; text-align: center;" name="money" value="{{ordt.oTotal}}">NT<br>
+                        <!-- 碳稅 --><input type="hidden" name="ctax" value="{{ ordt.C_tax}}">
+                        送洗店家：<span class="fs-4">{{ ordt.sId }}</span><br>
+                        寄/取件方式：<span class="fs-4">{{ ordt.oTransport }}</span><br>
+                        本次碳制郎點數：<span class="fs-4"></span><input readonly style="width: 10%; text-align: center;" name="POINT" value="{{ordt.oPoint}}">點<br>
+                        <button2><a href="{% url 'QRcode' %}" style="text-decoration: none;" class="btn">寄/取件QRcode</a></button2>             
+                        
+                        {% endfor %}                     
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

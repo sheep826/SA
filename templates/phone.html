@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/SMS.css' %}">
+    
+</head>
+<body>
+    <div class="top">
+        <p class="title_text">簡訊登入</p>
+    </div>        
+    <form action="/SMS/" method="POST">
+        {% csrf_token %} 
+        <div class="input_frame">
+            <input class="inputa" type="text" name="userphone" autocomplete="off" placeholder="請輸入手機電話號碼" value="">
+        </div>
+        <div class="input_frame">
+            <input type="submit" class="submit" value="送出">
+        </div>
+    </form>
+    <script type="text/javascript">
+        var context = '{{ context }}';
+        if (context == "錯誤") {
+            alert('請輸入正確的手機電話號碼！')
+            location.href="{% url 'phone' %}"
+        }
+    </script>
+</body>
+</html>

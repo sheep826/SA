@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <style>
+        .MESSAGE {
+            padding: 10px;
+            color: white;
+            font-weight: bolder;
+            text-decoration: none;
+            background-color: #2bb1ff;
+            border-radius: 10px;
+            width: 60%;
+            text-align: center;
+            font-size: larger;
+        }
+        .input_frame_M {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 5px;
+            margin-top: 10%;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <p class="title_text">登入</p>
+    </div>        
+    <div class="welcome">
+        <p class="welcome_text">💧智慧洗登入💧</p>
+        <p>透過LINE進行實名制登入</p> 
+    </div>
+    <div class="input_frame">
+        <a href="{{ login_line }}" class="LINE"> LINE驗證 </a>
+    </div>
+    <div class="input_frame_M">
+        <a href="{{ login_sms }}" class="MESSAGE"> 簡訊驗證 </a>
+    </div>
+</body>
+</html>

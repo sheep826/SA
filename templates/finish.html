@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>訂單已送出</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/finish.css' %}">
+    <meta http-equiv="refresh" content="5; url=finishorder/">
+</head>
+<body>
+    {% include 'nav.html' %}
+
+        <div class="container-fluid">
+            <div class="row box2 align-items-center justify-content-center">
+                <div class="col-10 box2-2">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="exampleModalToggleLabel2">完成通知</h3>
+                        </div>
+                        <hr style="width: 90%; text-align: center; margin: 10px;">
+                        <div class="modal-body">
+                            <img src="{% static 'images/check.png' %}" width="30px" height="30px">
+                            <div class="fs-5">確認付款！</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row box3 fs-5 align-items-center" style="display: flex; justify-content: center;">
+                <!-- <div class="col-6"> -->
+                    <button type="submit" style="border: none;"><a class="button1 button2" href="finishorder/"
+                        style="text-decoration: none;">完成</a></button>
+                    <!-- </div> -->
+            </div>
+        </div>
+</body>
+</html>

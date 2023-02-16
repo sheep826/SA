@@ -1,0 +1,117 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.title.fs-4{
+    background-color: #77bde6;
+    height: 10vh;
+    letter-spacing: 3px;
+    text-align: center;
+    font-size: 24px;
+    color:#ffffff;
+}
+.box1{
+    background: #e2f5fd;
+    height: 15vh;
+}
+.fs-4{
+    text-align: center;
+    padding: 7%;
+}
+.progress {
+    --bs-progress-height: 1.7rem;
+    --bs-progress-bg: #c4daf1;
+    --bs-progress-border-radius: 0.5rem;
+    --bs-progress-bar-bg: #508be4;
+    display: flex;
+}
+.box2{
+    background: #e2f5fd;
+    height: 60vh;
+}
+.box2-2{
+    background-color: #ffffff;
+    height: 80%;
+    min-height: 21%;
+    overflow: auto;
+    border-radius: 20px;
+    box-shadow: 10px 10px 25px #757474;
+}
+.fs-3{
+    padding-top: 5%;
+    color:#9D9D9D;
+}
+.fs-5{
+    color: #000;
+    margin-left: 12%;
+}
+/*google map*/
+@media (max-width: 599px) {
+    .google-maps {
+      position: relative;
+      padding-bottom: 90%; /* 此為地圖長寬比 */
+      height: 0;
+      overflow: hidden;
+    }
+    .google-maps iframe {
+      position: absolute;
+      top: 10%;
+      left: 10%;
+      right: 5%;
+      width: 100% !important;
+      height: 100% !important;
+    }
+}
+/*類型下拉式選單*/
+.btn1{
+    border-radius: 10px;
+    margin: 10px 0 0 10px;
+    color: #000;
+}
+.btn1:hover{
+    border: #000 solid 1px;
+    color: #000;
+}
+.btn.btn1{
+    border-radius: 10px;
+    border: #000 solid 1px;
+    margin: 10px 0 10px 40px;
+    color: #000;
+}
+/*bottom*/
+.box3{
+    background: #77bde6;
+    height: 15vh;
+}
+.box3-1{
+    text-align: center;
+    padding: 5%;
+}
+button1{
+    background-color: #508be4;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: bolder;
+    width: 300px;
+    height: 300px;
+    border-radius: 12px;
+    padding: 14px 40px;
+    transition-duration: 0.4s;
+
+}
+button1:hover {
+    background-color: #ffffff;
+    color: #508be4;
+  }
+/*提示框*/
+.btn.btn-primary{
+    max-width: 60%;
+    margin-left: 20%;
+}
+.modal-body{
+    text-align: left;
+}
+.modal-body>.fs-5{
+    margin-left: 35%;
+    margin-top: 5%;
+}
